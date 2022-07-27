@@ -1,0 +1,32 @@
+<h1> Route 2: List of all VPCs within a <u>us-east-1</u> region are as follows:</h1>
+
+<table style="border: 1px solid black;">
+    <thead>
+        <th>CIDR Block</th>
+        <th>Dhcp Options Id</th>
+        <th>State</th>
+        <th>VpcId</th>
+        <th>OwnerId</th>
+        <th>InstanceTenancy</th>
+        <th>IsDefault</th>
+    </thead>
+    <tbody>
+        <% VPCs.forEach(function(result){ %>
+        <tr>
+            <td><%= result.CidrBlock %></td>
+            <td><%= result.DhcpOptionsId %></td>
+            <td><%= result.State %></td>
+            <td><%= result.VpcId %></td>
+            <td><%= result.OwnerId %></td>
+            <td><%= result.InstanceTenancy %></td>
+            <td><%= result.IsDefault %></td>
+        </tr>
+        <%  }); %>
+    </tbody>
+</table>
+
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>

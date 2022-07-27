@@ -1,0 +1,36 @@
+<h1> Route 3: List of all subnets within <u><%= VPC %></u> VPC are as follows:</h1>
+
+<table>
+    <thead>
+        <th>SubnetId</th>
+        <th>VpcId</th>
+        <th>Availability Zone</th>
+        <th>Availability Zone Id</th>
+        <th>Available Ip Address Count</th>
+        <th>Cidr Block</th>
+        <th>State</th>
+        <th>OwnerId</th>
+        <th>SubnetArn</th>
+    </thead>
+    <tbody>
+        <% subnets.forEach(function(result){ %>
+        <tr>
+            <td><%= result.SubnetId %></td>
+            <td><%= result.VpcId %></td>
+            <td><%= result.AvailabilityZone %></td>
+            <td><%= result.AvailabilityZoneId %></td>
+            <td><%= result.AvailableIpAddressCount %></td>
+            <td><%= result.CidrBlock %></td>
+            <td><%= result.State %></td>
+            <td><%= result.OwnerId %></td>
+            <td><%= result.SubnetArn %></td>
+        </tr>
+        <%  }); %>
+    </tbody>
+</table>
+
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>

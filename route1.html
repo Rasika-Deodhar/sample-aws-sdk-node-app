@@ -1,0 +1,24 @@
+<h1> Route 1: List of all available AWS regions are as follows:</h1>
+
+<table style="border: 1px solid black;">
+    <thead>
+        <th>End Point</th>
+        <th>Region Name</th>
+        <th>Opt In Status</th>
+    </thead>
+    <tbody>
+        <% regions.forEach(function(result){ %>
+        <tr>
+            <td><%= result.Endpoint %></td>
+            <td><%= result.RegionName %></td>
+            <td><%= result.OptInStatus %></td>
+        </tr>
+        <%  }); %>
+    </tbody>
+</table>
+
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>
